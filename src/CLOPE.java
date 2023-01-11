@@ -9,7 +9,10 @@ public class CLOPE {
         this.transactions = transactions;
     }
     public List<Cluster> goCLOPE(double repulsion) {
+        int i = 0;
+        int count = transactions.size();
         for (Transaction transaction : transactions) {
+            System.out.printf("\r%6.2f%%", i++ * 100. / count);
             Cluster clusterNew = new Cluster();
             clusterNew.addTransaction(transaction);
             clusters.add(clusterNew);
@@ -29,6 +32,7 @@ public class CLOPE {
                 clusters.add(clusterNew);
             }
         }
+        System.out.print('\r');
         return clusters;
     }
 

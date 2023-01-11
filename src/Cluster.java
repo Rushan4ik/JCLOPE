@@ -78,6 +78,26 @@ public class Cluster {
         }
     }
 
+    public double deltaRemove(Transaction transaction, double repulsion) {
+        int newSquare = square - transaction.getLength();
+        int width = getWidth();
+        int newWidth = width;
+        for (String element : transaction.getData()) {
+            if (occ.containsKey(element) && occ.get(element) == 1) {
+                newWidth--;
+            }
+        }
+        int transactionsCount = transactions.size();
+        double newValue = newSquare * (transactionsCount - 1) * 1. / pow(newWidth, repulsion);
+        double oldValue = square * transactionsCount * 1. / pow(width, repulsion);
+        if (Double.isNaN(newValue)) {
+            return oldValue;
+        } else {
+            return newValue - oldValue;
+        }
+    }
+
+
     public int getTransactionCount() {
         return transactions.size();
     }
