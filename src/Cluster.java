@@ -108,6 +108,6 @@ public class Cluster {
         for (Transaction t : transactions) {
             if (t.getStatus()) c++;
         }
-        return "Cluster[" + c + "/" + transactions.size() + "|" + (c * 1. / transactions.size()) + "]";
+        return "Cluster[" + c + "/" + transactions.size() + "|" + "%6.2f".formatted(c * 100. / transactions.size()) + "]";
     }
 }

@@ -5,7 +5,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         CLOPE clope = new CLOPE(readTransactions());
-        List<Cluster> clusters = clope.goCLOPE(2);
+        List<Cluster> clusters = clope.goCLOPE(1.2);
         for (Cluster cluster : clusters) {
             System.out.printf("%s - %d\n", cluster, cluster.getTransactionCount());
         }
