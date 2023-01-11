@@ -27,3 +27,5 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/.idea/dbnavigator.xml
+/.idea/jpa-buddy.xml
