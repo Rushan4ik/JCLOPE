@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 @SuppressWarnings("ClassCanBeRecord")
 public class Transaction {
     private final String[] data;

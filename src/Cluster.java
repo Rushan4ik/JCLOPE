@@ -27,6 +27,7 @@ public class Cluster {
         for (String c : transaction.getData()) {
             if (occ.containsKey(c)) {
                 occ.put(c, occ.get(c) + 1);
+                System.out.println("Hello!");
             } else {
                 occ.put(c, 1);
             }
@@ -65,7 +66,7 @@ public class Cluster {
                 newWidth++;
             }
         }
-        double newValue = newSquare * (transactionsCount + 1) / pow(newWidth, repulsion);
+        double newValue = newSquare * (transactionsCount + 1) * 1. / pow(newWidth, repulsion);
         if (width == 0) {
             return newValue;
         } else {

@@ -15,18 +15,16 @@ public class Main {
             int clusterNum = clusters.size();
             Cluster newCluster = new Cluster();
             double value = newCluster.deltaAdd(transaction, repulsion);
-            System.out.println(transactionId);
-            System.out.println("\tvalue: " + value);
             for (int i = 0; i < clusters.size(); ++i) {
                 Cluster current = clusters.get(i);
                 double currentValue = current.deltaAdd(transaction, repulsion);
                 if (currentValue > value) {
-                    System.out.println(currentValue);
                     value = currentValue;
                     clusterNum = i;
                 }
             }
             if (clusterNum == clusters.size()) {
+                newCluster.addTransaction(transaction);
                 clusters.add(newCluster);
             } else {
                 clusters.get(clusterNum).addTransaction(transaction);
@@ -42,9 +40,6 @@ public class Main {
         readTransactions(repulsion);
 
         boolean moved = false;
-        mapTransactionNumberToClusterNumber.forEach((k, v) -> {
-            System.out.printf("\t%d: %d\n", k, v);
-        });
         do {
             moved = true;
         } while (!moved);
