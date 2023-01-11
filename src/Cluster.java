@@ -1,11 +1,12 @@
-import java.util.HashMap;
-import java.util.Set;
+import java.math.BigDecimal;
+import java.util.*;
+
 import static java.lang.Math.pow;
 
 public class Cluster {
     private final HashMap<String, Integer> occ = new HashMap<>();
+    private ArrayList<Transaction> transactions = new ArrayList<>();
     private int square = 0;
-    private int transactionsCount = 0;
 
     public Cluster() {}
 
@@ -23,11 +24,10 @@ public class Cluster {
 
     public void addTransaction(Transaction transaction) {
         square += transaction.getLength();
-        transactionsCount++;
+        transactions.add(transaction);
         for (String c : transaction.getData()) {
             if (occ.containsKey(c)) {
                 occ.put(c, occ.get(c) + 1);
-                System.out.println("Hello!");
             } else {
                 occ.put(c, 1);
             }
@@ -36,7 +36,7 @@ public class Cluster {
 
     public void removeTransaction(Transaction transaction) {
         square -= transaction.getLength();
-        transactionsCount--;
+        transactions.remove(transaction);
         for (String c : transaction.getData()) {
             if (occ.containsKey(c)) {
                 int freq = occ.remove(c) - 1;
@@ -61,17 +61,33 @@ public class Cluster {
         int newSquare = square + transaction.getLength();
         int width = getWidth();
         int newWidth = width;
+        Set<String> elements = new HashSet<>(distinctElements());
         for (String element : transaction.getData()) {
-            if (!occ.containsKey(element)) {
+            if (!elements.contains(element)) {
                 newWidth++;
+                elements.add(element);
             }
         }
+        int transactionsCount = transactions.size();
         double newValue = newSquare * (transactionsCount + 1) * 1. / pow(newWidth, repulsion);
-        if (width == 0) {
+        double oldValue = square * transactionsCount * 1. / pow(width, repulsion);
+        if (Double.isNaN(oldValue)) {
             return newValue;
         } else {
-            double oldValue = square * transactionsCount / pow(width, repulsion);
             return newValue - oldValue;
         }
+    }
+
+    public int getTransactionCount() {
+        return transactions.size();
+    }
+
+    @Override
+    public String toString() {
+        int c = 0;
+        for (Transaction t : transactions) {
+            if (t.getStatus()) c++;
+        }
+        return "Cluster[" + c + "/" + transactions.size() + "|" + (c * 1. / transactions.size()) + "]";
     }
 }
