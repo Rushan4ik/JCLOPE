@@ -1,11 +1,11 @@
 @SuppressWarnings("ClassCanBeRecord")
 public class Transaction {
-    private final char[] data;
-    public Transaction(char[] data) {
+    private final String[] data;
+    public Transaction(String[] data) {
         this.data = data;
     }
 
-    public char[] getData() {
+    public String[] getData() {
         return data;
     }
 
