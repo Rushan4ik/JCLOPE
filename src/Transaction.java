@@ -5,6 +5,7 @@ public final class Transaction {
     private final String[] data;
     private final String status;
 
+    @SuppressWarnings("unused")
     public Transaction(String[] data) {
         this.data = data;
         status = null;

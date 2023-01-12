@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b047a0d8-0df6-4c9c-8537-2394325975ce" name="Changes" comment="Исправление ошибки с недобавлением нового кластера">
+    <list default="true" id="b047a0d8-0df6-4c9c-8537-2394325975ce" name="Changes" comment="Выделение методов из основной логики">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CLOPE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CLOPE.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Cluster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cluster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transaction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673516642766</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Добавление нормального форматированния">
+      <created>1673518406667</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1673518406667</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -186,6 +193,8 @@
     <MESSAGE value=" Алгоритм завершён" />
     <MESSAGE value="Добавление класса для чтения из файла, вычленение интерфейса для других источников транзакций" />
     <MESSAGE value="Исправление ошибки с недобавлением нового кластера" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправление ошибки с недобавлением нового кластера" />
+    <MESSAGE value="Добавление нормального форматированния" />
+    <MESSAGE value="Выделение методов из основной логики" />
+    <option name="LAST_COMMIT_MESSAGE" value="Выделение методов из основной логики" />
   </component>
 </project>

@@ -11,6 +11,7 @@ public final class CLOPE {
         this.transactions = transactions;
     }
 
+    @SuppressWarnings("unused")
     public List<Cluster> getClusters() {
         return clusters;
     }
@@ -56,7 +57,6 @@ public final class CLOPE {
 
     private void init() {
         clusters.add(new Cluster());
-        int i = 0;
         for (Transaction transaction : transactions) {
             double maxCost = 0;
             Cluster current = null;
@@ -77,10 +77,12 @@ public final class CLOPE {
     }
 
 
+    @SuppressWarnings("unused")
     public void setRepulsion(double repulsion) {
         this.repulsion = repulsion;
     }
 
+    @SuppressWarnings("unused")
     public double getRepulsion() {
         return repulsion;
     }

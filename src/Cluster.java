@@ -1,5 +1,6 @@
 import java.util.*;
 
+@SuppressWarnings("unused")
 public final class Cluster {
     private final Set<Transaction> transactions = new HashSet<>();
     private final HashMap<String, Integer> occurrence = new HashMap<>();
