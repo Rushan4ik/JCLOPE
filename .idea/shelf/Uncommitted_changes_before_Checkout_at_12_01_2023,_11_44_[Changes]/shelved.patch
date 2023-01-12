@@ -1,0 +1,48 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"b047a0d8-0df6-4c9c-8537-2394325975ce\" name=\"Changes\" comment=\"Добавление класса CLOPE и методов deltaAdd/Remove\">\n      <change beforePath=\"$PROJECT_DIR$/src/Cluster.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Cluster.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Main.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2KBD77eGUibuRXr9YelTZ9Agchx\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"last_opened_file_path\": \"/home/rushan/IdeaProjects/JCLOPE\",\n    \"settings.editor.selected.configurable\": \"reference.settings.ide.settings.new.ui\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\n      <module name=\"JCLOPE\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.Main\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"b047a0d8-0df6-4c9c-8537-2394325975ce\" name=\"Changes\" comment=\"\" />\n      <created>1673438913762</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1673438913762</updated>\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Первый коммит\">\n      <created>1673439032175</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1673439032175</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Настройка .gitignore\">\n      <created>1673439088990</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1673439088990</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Добавление класса Transaction, реализованного в виде массива символов\">\n      <created>1673444454831</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1673444454832</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"добавление кала Cluster\">\n      <created>1673450634873</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1673450634873</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Исправление класса Cluster\">\n      <created>1673451485958</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1673451485958</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"Исправление класса Cluster\">\n      <created>1673460489145</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1673460489145</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"Добавление класса CLOPE и методов deltaAdd/Remove\">\n      <created>1673461914789</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1673461914789</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"8\" />\n    <servers />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Первый коммит\" />\n    <MESSAGE value=\"Настройка .gitignore\" />\n    <MESSAGE value=\"Добавление класса Transaction, реализованного в виде массива символов\" />\n    <MESSAGE value=\"добавление кала Cluster\" />\n    <MESSAGE value=\"Исправление класса Cluster\" />\n    <MESSAGE value=\"Добавление класса CLOPE и методов deltaAdd/Remove\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Добавление класса CLOPE и методов deltaAdd/Remove\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 692da77123b8f07168227e7dcef5e5e17aab1b1f)
++++ b/.idea/workspace.xml	(date 1673462287796)
+@@ -4,10 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="b047a0d8-0df6-4c9c-8537-2394325975ce" name="Changes" comment="Добавление класса CLOPE и методов deltaAdd/Remove">
+-      <change beforePath="$PROJECT_DIR$/src/Cluster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cluster.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+-    </list>
++    <list default="true" id="b047a0d8-0df6-4c9c-8537-2394325975ce" name="Changes" comment="Добавление класса CLOPE и методов deltaAdd/Remove, вывода в процентах готовности" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -114,7 +111,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1673461914789</updated>
+     </task>
+-    <option name="localTasksCounter" value="8" />
++    <task id="LOCAL-00008" summary="Добавление класса CLOPE и методов deltaAdd/Remove, вывода в процентах готовности">
++      <created>1673462260423</created>
++      <option name="number" value="00008" />
++      <option name="presentableId" value="LOCAL-00008" />
++      <option name="project" value="LOCAL" />
++      <updated>1673462260423</updated>
++    </task>
++    <option name="localTasksCounter" value="9" />
+     <servers />
+   </component>
+   <component name="VcsManagerConfiguration">
+@@ -124,6 +128,7 @@
+     <MESSAGE value="добавление кала Cluster" />
+     <MESSAGE value="Исправление класса Cluster" />
+     <MESSAGE value="Добавление класса CLOPE и методов deltaAdd/Remove" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Добавление класса CLOPE и методов deltaAdd/Remove" />
++    <MESSAGE value="Добавление класса CLOPE и методов deltaAdd/Remove, вывода в процентах готовности" />
++    <option name="LAST_COMMIT_MESSAGE" value="Добавление класса CLOPE и методов deltaAdd/Remove, вывода в процентах готовности" />
+   </component>
+ </project>
+\ No newline at end of file

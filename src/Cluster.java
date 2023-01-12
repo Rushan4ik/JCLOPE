@@ -53,4 +53,24 @@ public class Cluster {
     public boolean isEmpty() {
         return transactions.isEmpty();
     }
+
+    private double countValue(double repulsion) {
+        return isEmpty() ? 0 : square * getTransactionCount() * 1. / Math.pow(getWidth(), repulsion);
+    }
+
+    public double deltaAdd(Transaction transaction, double repulsion) {
+        double oldValue = countValue(repulsion);
+        addTransaction(transaction);
+        double newValue = countValue(repulsion);
+        removeTransaction(transaction);
+        return newValue - oldValue;
+    }
+
+    public double deltaRemove(Transaction transaction, double repulsion) {
+        double oldValue = countValue(repulsion);
+        removeTransaction(transaction);
+        double newValue = countValue(repulsion);
+        addTransaction(transaction);
+        return newValue - oldValue;
+    }
 }
