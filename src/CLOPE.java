@@ -1,53 +1,60 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
-public class CLOPE {
-    private List<Cluster> clusters = new ArrayList<>();
+public final class CLOPE {
+    private List<Cluster> clusters = new LinkedList<>();
     private final List<Transaction> transactions;
+    private double repulsion = 2;
 
-    public CLOPE(List<Transaction> transactions) {
+    public CLOPE(List<Transaction> transactions, double repulsion) {
+        this.repulsion = repulsion;
         this.transactions = transactions;
     }
-    public List<Cluster> goCLOPE(double repulsion) {
-        int i = 0;
-        int count = transactions.size();
-        for (Transaction transaction : transactions) {
-            System.out.printf("\r%6.2f%%", i++ * 100. / count);
-            Cluster clusterNew = new Cluster();
-            clusterNew.addTransaction(transaction);
-            clusters.add(clusterNew);
-            double profitFromNewCluster = getProfit(clusters, repulsion);
-            double profitMax = profitFromNewCluster;
-            clusters.remove(clusterNew);
-            for (Cluster cluster : clusters) {
-                cluster.addTransaction(transaction);
-                double profit = getProfit(clusters, repulsion);
-                if (profitMax <= profit) {
-                    profitMax = profit;
-                } else {
-                    cluster.removeTransaction(transaction);
-                }
-            }
-            if (profitMax == profitFromNewCluster) {
-                clusters.add(clusterNew);
-            }
-        }
-        System.out.print('\r');
+
+    public List<Cluster> getClusters() {
         return clusters;
     }
 
-    private double getProfit(List<Cluster> clusters, double repulsion) {
-        try {
-            double numerator = 0;
-            double denominator = 0;
+    public List<Cluster> execute() {
+        clusters.clear();
+
+        init();
+
+        boolean moved = false;
+        do {
+            moved = true;
+        } while (moved);
+
+        return clusters;
+    }
+
+    private void init() {
+        clusters.add(new Cluster());
+        for (Transaction transaction : transactions) {
+            double maxCost = 0;
+            Cluster current = null;
             for (Cluster cluster : clusters) {
-                numerator += cluster.getHeight() * cluster.getWidth() / Math.pow(cluster.getWidth(), repulsion) * cluster.getTransactionCount();
-                denominator += cluster.getTransactionCount();
+                double clusterCost = cluster.deltaAdd(transaction, repulsion);
+                if (clusterCost > maxCost) {
+                    maxCost = clusterCost;
+                    current = cluster;
+                }
             }
-            return numerator / denominator;
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return -1;
+            assert current != null;
+            if (current.isEmpty()) {
+                clusters.add(new Cluster());
+            }
+            current.addTransaction(transaction);
         }
+    }
+
+
+    public void setRepulsion(double repulsion) {
+        this.repulsion = repulsion;
+    }
+
+    public double getRepulsion() {
+        return repulsion;
     }
 }

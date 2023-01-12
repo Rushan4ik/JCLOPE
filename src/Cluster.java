@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Cluster {
+public final class Cluster {
     private final Set<Transaction> transactions = new HashSet<>();
     private final HashMap<String, Integer> occurrence = new HashMap<>();
     private int square = 0;
@@ -72,5 +72,18 @@ public class Cluster {
         double newValue = countValue(repulsion);
         addTransaction(transaction);
         return newValue - oldValue;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Cluster cluster = (Cluster) o;
+        return square == cluster.square && Objects.equals(transactions, cluster.transactions) && Objects.equals(occurrence, cluster.occurrence);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(transactions, occurrence, square);
     }
 }
