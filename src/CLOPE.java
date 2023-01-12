@@ -1,10 +1,9 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public final class CLOPE {
-    private List<Cluster> clusters = new LinkedList<>();
+    private final Set<Cluster> clusters = new HashSet<>();
     private final List<Transaction> transactions;
+    private final HashMap<Transaction, Cluster> table = new HashMap<>();
     private double repulsion = 2;
 
     public CLOPE(List<Transaction> transactions, double repulsion) {
@@ -12,18 +11,41 @@ public final class CLOPE {
         this.transactions = transactions;
     }
 
-    public List<Cluster> getClusters() {
+    public Set<Cluster> getClusters() {
         return clusters;
     }
 
-    public List<Cluster> execute() {
+    public Set<Cluster> execute() {
         clusters.clear();
 
         init();
 
         boolean moved = false;
         do {
-            moved = true;
+            for (Transaction transaction : transactions) {
+                moved = false;
+                Cluster keepingCluster = table.get(transaction);
+                double removeCost = keepingCluster.deltaRemove(transaction, repulsion);
+
+                double maxValue = 0;
+                Cluster current = null;
+                for (Cluster otherCluster : clusters) {
+                    if (otherCluster == keepingCluster) continue;
+                    double cost = otherCluster.deltaAdd(transaction, repulsion) + removeCost;
+                    if (cost > maxValue) {
+                        maxValue = cost;
+                        current = otherCluster;
+                    }
+                }
+
+                if (maxValue > 0) {
+                    if (current.isEmpty()) {
+                        clusters.add(new Cluster());
+                    }
+                    current.addTransaction(transaction);
+                    moved = true;
+                }
+            }
         } while (moved);
 
         return clusters;
@@ -45,6 +67,7 @@ public final class CLOPE {
             if (current.isEmpty()) {
                 clusters.add(new Cluster());
             }
+            table.put(transaction, current);
             current.addTransaction(transaction);
         }
     }

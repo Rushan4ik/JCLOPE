@@ -50,6 +50,10 @@ public final class Cluster {
         }
     }
 
+    public boolean containsTransaction(Transaction transaction) {
+        return transactions.contains(transaction);
+    }
+
     public boolean isEmpty() {
         return transactions.isEmpty();
     }
