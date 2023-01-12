@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b047a0d8-0df6-4c9c-8537-2394325975ce" name="Changes" comment="Добавление класса CLOPE и методов deltaAdd/Remove">
+    <list default="true" id="b047a0d8-0df6-4c9c-8537-2394325975ce" name="Changes" comment="Написания метода deltaAdd и deltaRemove">
       <change beforePath="$PROJECT_DIR$/src/Cluster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cluster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -20,6 +20,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="fb98cf1a4fede15fdaa9f66e38e364e569b9732b" />
+      </map>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -29,14 +36,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/rushan/IdeaProjects/JCLOPE",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/rushan/IdeaProjects/JCLOPE&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -52,6 +59,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -114,8 +122,33 @@
       <option name="project" value="LOCAL" />
       <updated>1673461914789</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Добавление обновленных классов Cluster и Transaction">
+      <created>1673507389445</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673507389445</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Написания метода deltaAdd и deltaRemove">
+      <created>1673508277998</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1673508277998</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Первый коммит" />
@@ -124,6 +157,8 @@
     <MESSAGE value="добавление кала Cluster" />
     <MESSAGE value="Исправление класса Cluster" />
     <MESSAGE value="Добавление класса CLOPE и методов deltaAdd/Remove" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавление класса CLOPE и методов deltaAdd/Remove" />
+    <MESSAGE value="Добавление обновленных классов Cluster и Transaction" />
+    <MESSAGE value="Написания метода deltaAdd и deltaRemove" />
+    <option name="LAST_COMMIT_MESSAGE" value="Написания метода deltaAdd и deltaRemove" />
   </component>
 </project>
