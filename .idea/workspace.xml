@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b047a0d8-0df6-4c9c-8537-2394325975ce" name="Changes" comment="Написания метода deltaAdd и deltaRemove">
-      <change beforePath="$PROJECT_DIR$/src/Cluster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cluster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="b047a0d8-0df6-4c9c-8537-2394325975ce" name="Changes" comment=" Алгоритм завершён" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -136,7 +133,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673508277998</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Добавление класса CLOPE. Написал метод init">
+      <created>1673510692858</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1673510692858</updated>
+    </task>
+    <task id="LOCAL-00011" summary=" Алгоритм завершён">
+      <created>1673513285761</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1673513285761</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,6 +170,8 @@
     <MESSAGE value="Добавление класса CLOPE и методов deltaAdd/Remove" />
     <MESSAGE value="Добавление обновленных классов Cluster и Transaction" />
     <MESSAGE value="Написания метода deltaAdd и deltaRemove" />
-    <option name="LAST_COMMIT_MESSAGE" value="Написания метода deltaAdd и deltaRemove" />
+    <MESSAGE value="Добавление класса CLOPE. Написал метод init" />
+    <MESSAGE value=" Алгоритм завершён" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Алгоритм завершён" />
   </component>
 </project>

@@ -42,12 +42,15 @@ public final class CLOPE {
                     if (current.isEmpty()) {
                         clusters.add(new Cluster());
                     }
+                    keepingCluster.removeTransaction(transaction);
                     current.addTransaction(transaction);
+                    table.put(transaction, current);
                     moved = true;
                 }
             }
         } while (moved);
 
+        clusters.removeIf(Cluster::isEmpty);
         return clusters;
     }
 
