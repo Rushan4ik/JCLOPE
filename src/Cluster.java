@@ -41,7 +41,7 @@ public final class Cluster {
 
     public void removeTransaction(Transaction transaction) {
         square -= transaction.getLength();
-        transactions.add(transaction);
+        transactions.remove(transaction);
         for (String element : transaction.getData()) {
             int newCount = occurrence.remove(element) - 1;
             if (newCount != 0) {
@@ -89,5 +89,15 @@ public final class Cluster {
     @Override
     public int hashCode() {
         return Objects.hash(transactions, occurrence, square);
+    }
+
+    @Override
+    public String toString() {
+        HashMap<String, Integer> temp = new HashMap<>();
+        for (Transaction transaction : transactions) {
+            String status = transaction.getStatus();
+            temp.put(status, temp.getOrDefault(status, 0) + 1);
+        }
+        return "[Cluster: " + temp + "]";
     }
 }

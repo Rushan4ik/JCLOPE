@@ -1,21 +1,21 @@
 import java.util.*;
 
 public final class CLOPE {
-    private final Set<Cluster> clusters = new HashSet<>();
+    private final List<Cluster> clusters = new LinkedList<>();
     private final List<Transaction> transactions;
     private final HashMap<Transaction, Cluster> table = new HashMap<>();
-    private double repulsion = 2;
+    private double repulsion;
 
     public CLOPE(List<Transaction> transactions, double repulsion) {
         this.repulsion = repulsion;
         this.transactions = transactions;
     }
 
-    public Set<Cluster> getClusters() {
+    public List<Cluster> getClusters() {
         return clusters;
     }
 
-    public Set<Cluster> execute() {
+    public List<Cluster> execute() {
         clusters.clear();
 
         init();
@@ -56,6 +56,7 @@ public final class CLOPE {
 
     private void init() {
         clusters.add(new Cluster());
+        int i = 0;
         for (Transaction transaction : transactions) {
             double maxCost = 0;
             Cluster current = null;
