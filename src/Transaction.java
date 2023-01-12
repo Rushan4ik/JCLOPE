@@ -1,10 +1,16 @@
 import java.util.Arrays;
+import java.util.Objects;
 
-@SuppressWarnings("ClassCanBeRecord")
-public class Transaction {
+public final class Transaction {
     private final String[] data;
-    private final boolean status;
-    public Transaction(String[] data, boolean status) {
+    private final String status;
+
+    public Transaction(String[] data) {
+        this.data = data;
+        status = null;
+    }
+
+    public Transaction(String[] data, String status) {
         this.data = data;
         this.status = status;
     }
@@ -13,14 +19,12 @@ public class Transaction {
         return data;
     }
 
-    public int getLength() {
-        return data.length;
+    public String getStatus() {
+        return status;
     }
 
-
-    @Override
-    public String toString() {
-        return data[0];
+    public int getLength() {
+        return data.length;
     }
 
     @Override
@@ -28,16 +32,13 @@ public class Transaction {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Transaction that = (Transaction) o;
-        return Arrays.equals(data, that.data);
+        return Arrays.equals(data, that.data) && Objects.equals(status, that.status);
     }
 
     @Override
     public int hashCode() {
-        return Arrays.hashCode(data);
+        int result = Objects.hash(status);
+        result = 31 * result + Arrays.hashCode(data);
+        return result;
     }
-
-    public boolean getStatus() {
-        return status;
-    }
-
 }
