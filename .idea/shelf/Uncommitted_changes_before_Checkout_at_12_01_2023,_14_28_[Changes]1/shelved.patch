@@ -1,0 +1,33 @@
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.ArrayList;\n\npublic class Main {\n    public static void main(String[] args) {\n        class A {\n            int a;\n\n            @Override\n            public String toString() {\n                return \"A: \" + a;\n            }\n        }\n        A a = new A();\n        a.a = 24;\n        ArrayList<A> arrayList = new ArrayList<>();\n        arrayList.add(a);\n        for (A aw : arrayList) {\n            aw.a = 2;\n        }\n        System.out.println(a.a);\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	
++++ b/src/Main.java	
+@@ -2,21 +2,5 @@
+ 
+ public class Main {
+     public static void main(String[] args) {
+-        class A {
+-            int a;
+-
+-            @Override
+-            public String toString() {
+-                return "A: " + a;
+-            }
+-        }
+-        A a = new A();
+-        a.a = 24;
+-        ArrayList<A> arrayList = new ArrayList<>();
+-        arrayList.add(a);
+-        for (A aw : arrayList) {
+-            aw.a = 2;
+-        }
+-        System.out.println(a.a);
+     }
+ }
+\ No newline at end of file
